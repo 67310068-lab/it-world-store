@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Prompt:wght@500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at 50% 20%, #fefcf9 0%, #f5efe6 70%, #eae2d5 100%);
+  color: #4a101d;
+  min-height: 100vh;
+  font-family: 'Kanit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* Navbar 3D Glassmorphic Container */
+nav, .navbar {
+  background: linear-gradient(180deg, rgba(255, 253, 250, 0.98) 0%, rgba(245, 237, 226, 0.95) 100%) !important;
+  backdrop-filter: blur(14px);
+  border-bottom: 2px solid rgba(132, 30, 51, 0.15);
+  box-shadow: 0 8px 25px rgba(74, 16, 29, 0.1), inset 0 1px 0 #ffffff;
+  padding: 0.9rem 2.5rem !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* 3D Brand Logo */
+.nav-brand {
+  font-family: 'Prompt', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 1.4rem !important;
+  color: #841e33 !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-shadow: 0 2px 0 #ffffff, 0 3px 6px rgba(132, 30, 51, 0.2);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-brand:hover {
+  transform: scale(1.06) translateY(-2px);
+  text-shadow: 0 4px 0 #ffffff, 0 6px 12px rgba(132, 30, 51, 0.3);
+}
+
+.nav-menu {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+
+/* 3D Bouncy Navigation Link */
+.nav-link {
+  color: #6a1727 !important;
+  font-family: 'Prompt', sans-serif !important;
+  font-size: 0.98rem !important;
+  font-weight: 600 !important;
+  padding: 0.5rem 1.1rem !important;
+  border-radius: 50px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f2ea 100%);
+  border: 1.5px solid rgba(132, 30, 51, 0.18) !important;
+  box-shadow: 0 4px 10px rgba(74, 16, 29, 0.08), inset 0 1px 0 #ffffff;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link:hover {
+  color: #841e33 !important;
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 8px 18px rgba(132, 30, 51, 0.2), inset 0 1px 0 #ffffff !important;
+}
+
+/* 3D Glossy Burgundy Cart Button */
+.nav-cart-btn {
+  background: linear-gradient(180deg, #99243d 0%, #631424 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  padding: 0.55rem 1.25rem !important;
+  border-radius: 50px !important;
+  font-family: 'Prompt', sans-serif !important;
+  font-size: 0.98rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  box-shadow: 
+    0 6px 18px rgba(99, 20, 36, 0.35),
+    inset 0 2px 2px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.nav-cart-btn:hover {
+  transform: translateY(-4px) scale(1.06) !important;
+  box-shadow: 
+    0 10px 24px rgba(99, 20, 36, 0.45),
+    inset 0 2px 2px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* 3D User Badge */
+.user-badge {
+  background: linear-gradient(180deg, #faf6f0 0%, #ede3d3 100%);
+  border: 1.5px solid rgba(132, 30, 51, 0.2);
+  padding: 0.5rem 1.1rem;
+  border-radius: 50px;
+  color: #4a101d;
+  font-family: 'Kanit', sans-serif !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(74, 16, 29, 0.08), inset 0 1px 0 #ffffff;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.user-badge:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.user-badge strong {
+  color: #841e33;
+  font-family: 'Prompt', sans-serif !important;
+}
+
+/* 3D Logout Button */
+.nav-logout-btn {
+  background: linear-gradient(180deg, #ffffff 0%, #f4ede2 100%) !important;
+  color: #841e33 !important;
+  border: 1.5px solid rgba(132, 30, 51, 0.35) !important;
+  padding: 0.5rem 1.15rem !important;
+  border-radius: 50px !important;
+  font-family: 'Prompt', sans-serif !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(74, 16, 29, 0.1), inset 0 1px 0 #ffffff !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.nav-logout-btn:hover {
+  background: linear-gradient(180deg, #841e33 0%, #631424 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 8px 20px rgba(132, 30, 51, 0.35) !important;
+}
+
+/* 🛒 CART SPECIFIC 3D BOUNCY STYLING (ตกแต่งหน้าตะกร้าให้เด้งนูนสวยงาม) */
+.cart-box {
+  max-width: 880px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fdfbf7 100%) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 20px 50px rgba(74, 16, 29, 0.14), inset 0 1px 0 #ffffff !important;
+  border: 1px solid rgba(132, 30, 51, 0.2) !important;
+}
+
+.cart-item-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.4rem;
+  background: linear-gradient(180deg, #fcf9f4 0%, #f6f0e4 100%);
+  border-radius: 20px;
+  border: 1.5px solid rgba(132, 30, 51, 0.15);
+  box-shadow: 0 8px 18px rgba(74, 16, 29, 0.06), inset 0 1px 0 #ffffff;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cart-item-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 15px 30px rgba(74, 16, 29, 0.14), inset 0 1px 0 #ffffff;
+  border-color: rgba(132, 30, 51, 0.3);
+}
+
+/* ปุ่ม + / - แบบ 3D Glossy Bouncy */
+.btn-qty {
+  width: 38px !important;
+  height: 38px !important;
+  padding: 0 !important;
+  border-radius: 10px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #efe7dc 100%) !important;
+  color: #841e33 !important;
+  border: 1.5px solid rgba(132, 30, 51, 0.25) !important;
+  font-family: 'Prompt', sans-serif !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(74, 16, 29, 0.08), inset 0 1px 0 #ffffff, inset 0 -2px 0 rgba(0,0,0,0.06) !important;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.btn-qty:hover:not(:disabled) {
+  transform: translateY(-3px) scale(1.1) !important;
+  background: linear-gradient(180deg, #841e33 0%, #631424 100%) !important;
+  color: #ffffff !important;
+  border-color: #841e33 !important;
+  box-shadow: 0 8px 16px rgba(132, 30, 51, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+.btn-qty:active:not(:disabled) {
+  transform: translateY(1px) scale(0.95) !important;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+/* ช่องกรอกตัวเลขจำนวนนูนบุ๋ม 3D */
+.cart-qty-input {
+  width: 65px !important;
+  text-align: center !important;
+  padding: 0.4rem 0.2rem !important;
+  font-family: 'Prompt', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  border: 1.5px solid rgba(132, 30, 51, 0.25) !important;
+  box-shadow: inset 0 2px 5px rgba(74, 16, 29, 0.1) !important;
+}
+
+/* ปุ่ม ลบ สไตล์ 3D Red Glossy */
+.btn-delete {
+  width: auto !important;
+  padding: 0.5rem 1.1rem !important;
+  background: linear-gradient(180deg, #ef4444 0%, #b91c1c 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 10px !important;
+  font-family: 'Prompt', sans-serif !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-delete:hover {
+  transform: translateY(-3px) scale(1.08) !important;
+  box-shadow: 0 8px 20px rgba(185, 28, 28, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ปุ่มเลือกสินค้าเพิ่ม (3D Vintage Brown/Cream) */
+.btn-secondary-3d {
+  width: auto !important;
+  background: linear-gradient(180deg, #7a4652 0%, #522d36 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  padding: 0.85rem 1.7rem !important;
+  border-radius: 14px !important;
+  font-family: 'Prompt', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(82, 45, 54, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.btn-secondary-3d:hover {
+  transform: translateY(-3px) scale(1.04) !important;
+  box-shadow: 0 10px 24px rgba(82, 45, 54, 0.42) !important;
+}
+
+/* ปุ่มยืนยันการสั่งซื้อ (3D Emerald Green Glossy) */
+.btn-confirm-3d {
+  width: auto !important;
+  background: linear-gradient(180deg, #10b981 0%, #047857 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  padding: 0.85rem 2.2rem !important;
+  border-radius: 14px !important;
+  font-family: 'Prompt', sans-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  box-shadow: 
+    0 8px 22px rgba(4, 120, 87, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.btn-confirm-3d:hover {
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow: 
+    0 12px 28px rgba(4, 120, 87, 0.48),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Layout สินค้าหน้าหลัก */
+.hero {
+  background: linear-gradient(145deg, #841e33 0%, #5a1221 50%, #3d0914 100%) !important;
+  border-radius: 24px !important;
+  padding: 3.5rem 2rem !important;
+  text-align: center;
+  margin: 2rem auto !important;
+  max-width: 1200px;
+  color: #fdfbf7 !important;
+  box-shadow: 0 20px 40px -10px rgba(61, 9, 20, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero h1 {
+  font-family: 'Prompt', sans-serif !important;
+  font-size: 2.4rem !important;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+  font-family: 'Kanit', sans-serif !important;
+  color: #f3eae6 !important;
+  font-size: 1.05rem;
+}
+
+.product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)) !important;
+  gap: 2rem !important;
+}
+
+.card {
+  background: linear-gradient(180deg, #ffffff 0%, #fdfbf7 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  border-radius: 22px !important;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(74, 16, 29, 0.08);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03) !important;
+  box-shadow: 0 22px 35px -10px rgba(74, 16, 29, 0.25) !important;
+}
+
+img {
+  width: 100% !important;
+  height: 200px !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 1.4rem !important;
+}
+
+.card-body h3 {
+  font-family: 'Prompt', sans-serif !important;
+  font-size: 1.18rem;
+  color: #4a101d;
+  font-weight: 700;
+}
+
+.card-body p {
+  font-family: 'Kanit', sans-serif !important;
+  color: #6b404a;
+  font-size: 0.88rem;
+  margin-top: 0.3rem;
+}
+
+.price {
+  font-family: 'Prompt', sans-serif !important;
+  color: #841e33 !important;
+  font-size: 1.4rem !important;
+  font-weight: 800 !important;
+  margin: 0.8rem 0 !important;
+}
+
+.card button, form button {
+  width: 100% !important;
+  background: linear-gradient(180deg, #841e33 0%, #631424 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  padding: 0.8rem 1.2rem !important;
+  border-radius: 12px !important;
+  font-family: 'Prompt', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(99, 20, 36, 0.3) !important;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.card button:hover, form button:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 8px 22px rgba(99, 20, 36, 0.42) !important;
+}
+
+input, select {
+  background-color: #fcf9f4 !important;
+  border: 1.5px solid rgba(132, 30, 51, 0.2) !important;
+  color: #4a101d !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 10px !important;
+  outline: none;
+  font-family: 'Kanit', sans-serif !important;
+}
